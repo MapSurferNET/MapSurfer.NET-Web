@@ -4,8 +4,10 @@
 
 /MapSurfer.Web.Interfaces/bin
 /MapSurfer.Web.Interfaces/obj
-/packages
-/Hosting/ASP.NET/bin
+/packages            
+/Hosting/ASP.NET/bin/MapSurfer.Web.Hosting.AspNet.pdb
+/Hosting/ASP.NET/bin/MapSurfer.Web.Interfaces.pdb
+/Hosting/ASP.NET/bin/MapSurfer.Web.Interfaces.xml
 /Hosting/ASP.NET/obj
 /Hosting/Nancy/obj
 /Applications/Nancy/Self-Hosting/bin
@@ -14,3 +16,11 @@
 /Hosting/Nancy/bin
 /Hosting/Nancy/Properties/PublishProfiles
 /Hosting/ASP.NET/Properties/PublishProfiles
+packages/Microsoft.Owin.3.0.0/lib/net45/Microsoft.Owin.XML
+Hosting/ASP.NET/bin/MapSurfer.Web.SystemWeb.dll.config
+Hosting/ASP.NET/bin/MapSurfer.Web.Hosting.SystemWeb.dll.config
+Hosting/ASP.NET/bin/MSNMapService.dll.config
+packages/Nancy.1.0.0/lib/net40/Nancy.xml
+packages/Microsoft.Owin.3.0.0/Microsoft.Owin.3.0.0.nupkg
+packages/Nancy.1.0.0/Nancy.1.0.0.nupkg
+packages/Owin.1.0/Owin.1.0.nupkg
