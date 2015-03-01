@@ -25,6 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASP.NET", "http://localhost
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{fd19bea8-8048-4492-b642-d4cc52ae7571}|MapSurfer.Web.Hosting.AspNet.dll;{A178F71B-F152-4685-9725-7B884A47A752}|MapSurfer.Web.Interfaces.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_58600"
 		Debug.AspNetCompiler.PhysicalPath = "Applications\ASP.NET\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58600\"
