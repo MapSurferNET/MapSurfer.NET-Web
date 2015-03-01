@@ -7,4 +7,11 @@ This project requires at least [MapSurfer.NET 2.0] (http://mapsurfernet.com/docs
 # License
 Refer to [LICENSE] (https://github.com/Rungee/MapSurfer.NET-Web/blob/master/LICENSE) for more information on license terms.
 
+# Dependencies
++   [Nancy][1]
++   [Nancy.Hosting.Self][2]
+
+[1]: http://www.nuget.org/packages/Nancy/  "Nancy"
+[2]: http://www.nuget.org/packages/Nancy.Hosting.Self/  "Nancy.Hosting.Self"
+
 
