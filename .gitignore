@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MapSurfer.Web.Interfaces/bin
+/MapSurfer.Web.Interfaces/obj
+/packages
+/Hosting/ASP.NET/bin
+/Hosting/ASP.NET/obj
+/Hosting/Nancy/obj
+/Applications/Nancy/Self-Hosting/bin
+/Applications/Nancy/Self-Hosting/obj
+/Applications/ASP.NET/bin
+/Hosting/Nancy/bin
+/Hosting/Nancy/Properties/PublishProfiles
+/Hosting/ASP.NET/Properties/PublishProfiles
