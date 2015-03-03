@@ -172,6 +172,7 @@ namespace MapSurfer.Web.Hosting
         {
           AssemblyName name = AssemblyName.GetAssemblyName(path);
           Assembly assembly = Assembly.Load(name);
+          return assembly;
         }
 
         string[] dirs = Directory.GetDirectories(dirAssemblies, "*", SearchOption.AllDirectories);
