@@ -74,11 +74,16 @@ namespace MapSurfer.Web.Interfaces.Nancy
       m_response.Headers.Add(header, value);
     }
 
+    private StreamWriter CreateStreamWriter(Stream stream, Encoding encoding)
+    {
+      return new StreamWriter(stream, encoding, 1024, true);
+    }
+
     public void Write(string value)
     {
       m_response.Contents = stream =>
       {
-        using (var writer = new StreamWriter(stream))
+        using (var writer = CreateStreamWriter(stream, Encoding.UTF8))
         {
           writer.Write(value);
         }
@@ -89,7 +94,7 @@ namespace MapSurfer.Web.Interfaces.Nancy
     {
       m_response.Contents = stream =>
       {
-        using (var writer = new StreamWriter(stream, encoding))
+        using (var writer = CreateStreamWriter(stream, encoding))
         {
           writer.Write(value);
         }

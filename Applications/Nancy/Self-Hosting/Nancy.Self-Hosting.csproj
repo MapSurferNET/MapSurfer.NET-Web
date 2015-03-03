@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Hosting\Nancy\MapSurfer.Web.Hosting.Nancy.csproj">
-      <Project>{e737a921-b110-464a-b5dc-04a84dd506f1}</Project>
+      <Project>{7f386f25-e9e3-4a97-9b80-d3c7abe724c5}</Project>
       <Name>MapSurfer.Web.Hosting.Nancy</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\MapSurfer.Web.Interfaces\MapSurfer.Web.Interfaces.csproj">
