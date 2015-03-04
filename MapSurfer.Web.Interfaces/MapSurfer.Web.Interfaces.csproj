@@ -30,7 +30,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -197,9 +197,6 @@
 copy $(TargetPath) $(SolutionDir)\Bin\$(ConfigurationName)\Web\Nancy\Self-Hosting
 )
 
-IF $(ConfigurationName) == Release (
-copy $(TargetDir)\$(TargetName).xml $(SolutionDir)\Documentation\Help\Source\
-)
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
