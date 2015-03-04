@@ -25,3 +25,8 @@ packages/Microsoft.Owin.3.0.0/Microsoft.Owin.3.0.0.nupkg
 packages/Nancy.1.0.0/Nancy.1.0.0.nupkg
 packages/Owin.1.0/Owin.1.0.nupkg
 Hosting/ASP.NET/bin/MapSurfer.Web.Interfaces.dll.mdb
+Hosting/ASP.NET/bin/MapSurfer.Web.Hosting.AspNet.dll.config
+Hosting/ASP.NET/web.Debug.config
+Hosting/ASP.NET/web.Release.config
+Hosting/ASP.NET/web.DebugMono.config
+Hosting/ASP.NET/web.ReleaseMono.config
