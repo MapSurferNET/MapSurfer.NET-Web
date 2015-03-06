@@ -35,7 +35,10 @@ namespace MapSurfer.Web.Interfaces.Nancy
 
     public string UserHostAddress
     {
-      get { return m_request.UserHostAddress; }
+      get
+      {
+        return m_request.UserHostAddress;
+      }
     }
 
     private NameValueCollection GetQueryValues()

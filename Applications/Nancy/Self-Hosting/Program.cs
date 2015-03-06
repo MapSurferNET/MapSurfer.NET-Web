@@ -48,10 +48,10 @@ namespace MapSurfer.Web.Hosting.Nancy
     {
       m_mapService = new NancyHostMapService();
       Console.WriteLine();
-      Console.Write("Service is being loaded...");
+      Console.Write("Loading service...");
       m_mapService.Load();
       Console.WriteLine("   Done.");
-      Console.Write("Service is being started...");
+      Console.Write("Starting service...");
       m_mapService.Start();
       Console.WriteLine("   Done.");
     }

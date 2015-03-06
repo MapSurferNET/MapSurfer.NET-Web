@@ -62,13 +62,20 @@ namespace MapSurfer.Web.Hosting
       string typeName = "MapSurfer.Web.Services.MappingService";
       object[] args = new object[] { (string)ConfigurationManager.AppSettings["MapSurfer.ServiceName"] };
 
-      m_mapService = assembly.CreateInstance(typeName, true, BindingFlags.CreateInstance, null, args, System.Globalization.CultureInfo.InvariantCulture, null);
-      MethodInfo methodProcessReq = m_mapService.GetType().GetMethod("ProcessRequest");
+      try
+      {
+        m_mapService = assembly.CreateInstance(typeName, true, BindingFlags.CreateInstance, null, args, System.Globalization.CultureInfo.InvariantCulture, null);
+        MethodInfo methodProcessReq = m_mapService.GetType().GetMethod("ProcessRequest");
 
-      m_processReqDelegate = (ProcessRequestDelegate)Delegate.CreateDelegate(typeof(ProcessRequestDelegate), m_mapService, methodProcessReq);
+        m_processReqDelegate = (ProcessRequestDelegate)Delegate.CreateDelegate(typeof(ProcessRequestDelegate), m_mapService, methodProcessReq);
 
-      MethodInfo methodGetMapUrls = m_mapService.GetType().GetMethod("GetMapUrls");
-      m_getMapUrlsDelegate = (GetMapUrlsDelegate)Delegate.CreateDelegate(typeof(GetMapUrlsDelegate), m_mapService, methodGetMapUrls);
+        MethodInfo methodGetMapUrls = m_mapService.GetType().GetMethod("GetMapUrls");
+        m_getMapUrlsDelegate = (GetMapUrlsDelegate)Delegate.CreateDelegate(typeof(GetMapUrlsDelegate), m_mapService, methodGetMapUrls);
+      }
+      catch (TargetInvocationException tiex)
+      {
+        throw tiex.GetBaseException();
+      }
 
       AssemblyLoader.Unregister();
     }
