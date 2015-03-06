@@ -30,3 +30,6 @@ Hosting/ASP.NET/web.Debug.config
 Hosting/ASP.NET/web.Release.config
 Hosting/ASP.NET/web.DebugMono.config
 Hosting/ASP.NET/web.ReleaseMono.config
+Hosting/ASP.NET/bin/Release/MapSurfer.Web.Interfaces.dll.mdb
+Hosting/ASP.NET/bin/ReleaseMono/MapSurfer.Web.Hosting.AspNet.dll.mdb
+*.mdb
