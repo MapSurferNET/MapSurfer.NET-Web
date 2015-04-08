@@ -109,7 +109,14 @@ namespace MapSurfer.Web.Hosting.AspNet
 
     public AspNetHostMapService()
     {
-
+#if !MONO
+      try
+      {
+        MapSurfer.Web.HostingEnvironment.SetWebSiteName(System.Web.Hosting.HostingEnvironment.ApplicationHost.GetSiteName());
+      }
+      catch
+      { }
+#endif	
     }
 
     private static Action<Type> GetFx45RegisterModuleDelegate()

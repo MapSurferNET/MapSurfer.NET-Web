@@ -17,8 +17,9 @@ namespace MapSurfer.Web.Interfaces.AspNet
 
     public bool IsClientConnected
     {
-      get { 
-        return m_response.IsClientConnected; 
+      get
+      {
+        return m_response.IsClientConnected;
       }
     }
 

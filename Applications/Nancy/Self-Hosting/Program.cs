@@ -7,6 +7,7 @@
 //
 //==========================================================================================
 using System;
+using System.IO;
 using System.Configuration;
 
 using Nancy;
@@ -20,6 +21,12 @@ namespace MapSurfer.Web.Hosting.Nancy
   {
     static void Main(string[] args)
     {
+      if (args != null && args.Length >= 2)
+      {
+        if (args[0] == "-conf" && File.Exists(args[1]))
+          AppConfig.ChangeAppConfig(args[1]);
+      }
+
       // initialize an instance of NancyHost (found in the Nancy.Hosting.Self package)
       string uri = (string)ConfigurationManager.AppSettings["Nancy.Uri"];
       if (string.IsNullOrEmpty(uri))

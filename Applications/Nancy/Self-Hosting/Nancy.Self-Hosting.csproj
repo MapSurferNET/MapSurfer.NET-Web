@@ -111,10 +111,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConfig.cs" />
     <Compile Include="MapsModule.cs" />
     <Compile Include="StreamResponse.cs" />
     <Compile Include="Program.cs" />
