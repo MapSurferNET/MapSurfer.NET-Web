@@ -62,6 +62,19 @@ namespace MapSurfer.Web.Interfaces.AspNet
       m_response.AddHeader(header, value);
     }
 
+    public void SetExpirationTime(int time)
+    {
+      m_response.Cache.SetMaxAge(new TimeSpan(0, 0, time));
+      m_response.Cache.SetExpires(DateTime.UtcNow.AddSeconds(time));
+      m_response.Cache.SetValidUntilExpires(false);
+    }
+
+    public void SetCreationTime(DateTime time)
+    {
+      if (time != DateTime.MinValue)
+        m_response.Cache.SetLastModified(time);
+    }
+
     public void Write(string value)
     {
       m_response.Write(value);

@@ -120,16 +120,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Hosting\Nancy\MapSurfer.Web.Hosting.Nancy.csproj">
       <Project>{7f386f25-e9e3-4a97-9b80-d3c7abe724c5}</Project>
       <Name>MapSurfer.Web.Hosting.Nancy</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\..\MapSurfer.Web.Interfaces\MapSurfer.Web.Interfaces.csproj">
       <Project>{a178f71b-f152-4685-9725-7b884a47a752}</Project>
       <Name>MapSurfer.Web.Interfaces</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

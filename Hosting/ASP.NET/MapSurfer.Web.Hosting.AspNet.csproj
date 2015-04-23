@@ -129,6 +129,7 @@
     <ProjectReference Include="..\..\MapSurfer.Web.Interfaces\MapSurfer.Web.Interfaces.csproj">
       <Project>{a178f71b-f152-4685-9725-7b884a47a752}</Project>
       <Name>MapSurfer.Web.Interfaces</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

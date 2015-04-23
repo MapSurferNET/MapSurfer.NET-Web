@@ -74,6 +74,23 @@ namespace MapSurfer.Web.Interfaces.Nancy
       m_response.Headers.Add(header, value);
     }
 
+    public void SetExpirationTime(int time)
+    {
+      DateTime dtNow = DateTime.UtcNow;
+      DateTime dtExpires = dtNow.AddSeconds(time);
+      TimeSpan tsMaxAge = new TimeSpan(0, 0, time);
+
+      m_response.Headers.Add("Max-Age", tsMaxAge.TotalSeconds.ToString());
+      //m_response.Cache.SetExpires(dtExpires);
+      //m_response.Cache.SetValidUntilExpires(false);
+    }
+
+    public void SetCreationTime(DateTime time)
+    {
+      if (time != DateTime.MinValue)
+        m_response.Headers.Add("Last-Modified", time.ToString());
+    }
+
     private StreamWriter CreateStreamWriter(Stream stream, Encoding encoding)
     {
       return new StreamWriter(stream, encoding, 1024, true);

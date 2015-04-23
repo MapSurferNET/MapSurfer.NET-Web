@@ -27,6 +27,10 @@ namespace MapSurfer.Web
 
     void AddHeader(string header, string value);
 
+    void SetExpirationTime(int time);
+
+    void SetCreationTime(DateTime time);
+
     void Write(string value);
 
     void Write(string value, Encoding encoding);
