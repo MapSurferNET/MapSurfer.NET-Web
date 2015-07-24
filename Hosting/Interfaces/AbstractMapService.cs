@@ -86,6 +86,12 @@ namespace MapSurfer.Web.Hosting
       mi.Invoke(m_mapService, null);
     }
 
+    public void Stop()
+    {
+      MethodInfo mi = m_mapService.GetType().GetMethod("Stop");
+      mi.Invoke(m_mapService, null);
+    }
+
     public void WriteError(Exception ex)
     {
       MethodInfo mi = m_mapService.GetType().GetMethod("WriteError");

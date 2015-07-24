@@ -11,6 +11,7 @@ using System.Configuration;
 using System.IO;
 using System.Reflection;
 using System.Web;
+using System.Web.Hosting;
 
 using MapSurfer.Web.Interfaces.AspNet;
 
@@ -103,12 +104,14 @@ namespace MapSurfer.Web.Hosting.AspNet
   /// <summary>
   /// Summary description for AspNetHostMapService
   /// </summary>
-  public class AspNetHostMapService : AbstractMapService
+  public class AspNetHostMapService : AbstractMapService, IRegisteredObject
   {
     private static readonly Action<Type> Fx45RegisterModuleDelegate = GetFx45RegisterModuleDelegate();
 
     public AspNetHostMapService()
     {
+      System.Web.Hosting.HostingEnvironment.RegisterObject(this);
+
 #if !MONO
       try
       {
@@ -226,6 +229,18 @@ namespace MapSurfer.Web.Hosting.AspNet
       catch (Exception ex)
       {
         throw new Exception("Unable to register type " + type.FullName, ex);
+      }
+    }
+
+    public void Stop(bool immediate)
+    {
+      if (immediate == false)
+      {
+        base.Stop();
+      }
+      else
+      {
+        System.Web.Hosting.HostingEnvironment.UnregisterObject(this);
       }
     }
   }
