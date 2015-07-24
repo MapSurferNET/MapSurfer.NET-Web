@@ -23,7 +23,7 @@ namespace MapSurfer.Web
 
     void Clear();
 
-    void Flush();
+    void Flush(); 
 
     void AddHeader(string header, string value);
 
